@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+</head>
+<body>
+    {% for Student in Student %}
+    <div class="card-deck">
+        <div class="card">
+            <img class="card-img-top" src="media/{{Student.simg}}" alt="Card image cap" style="max-width: 18rem; float: right;" height="100vh;">
+          <div class="card-body">
+            
+            <h5 class="card-title">Student name : {{Student.sname}}</h5>
+            <p class="card-text">Student college : {{Student.colname}}</p>
+            <p class="card-text">Student courses : {{Student.scourse}}</p>
+            <p class="card-text">Student branch : {{Student.sbranch}}</p>
+            <p class="card-text">Subject : {{Student.ssubject}}</p>
+            <p class="card-text">Semester : {{Student.ssem}}</p>
+          </div>
+        </div>
+       
+      </div> 
+    {% endfor %}
+</body>
+</html>

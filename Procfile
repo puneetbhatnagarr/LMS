@@ -1,0 +1,1 @@
+web: gunicorn projectosp.wsgi --log-file -

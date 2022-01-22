@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register your self</title>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+            <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <!------ Include the above in your HEAD tag ---------->
+    </head>
+    <style>
+       body{
+        background-color: #000;
+      box-sizing: border-box; font-family:sans-serif;
+       }
+    </style>
+    <center>
+        <body>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                      <div class="card-body">
+  <h2 style="font-weight:bold;color:#009df2; text-align: center;"> Student Registration Form</h2>
+         <br>
+  <form class="form-horizontal" method="post" action="../studentreg/" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="name" class="cols-sm-2 control-label" style="font-weight: 900; font-size: medium; font: 1rem sans-serif; float: left;" >College Name</label>
+               <div class="cols-sm-10">
+                  <div class="input-group">
+                   <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+             <input type="text" class="form-control" name="scol" id="name" placeholder="Enter college Name" />
+                       </div>
+                 </div>
+                 </div>
+                 <div class="mb-3">
+                  <label for="name" class="cols-sm-2 control-label" style="font-weight: 900; font-size: medium; font: 1rem sans-serif; float: left;" >Course Name</label>
+                       <div class="cols-sm-10">
+                          <div class="input-group">
+                           <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                     <input type="text" class="form-control" name="scor" id="name" placeholder="Enter Course Name" />
+                               </div>
+                         </div>
+                         </div>
+                         <div class="mb-3">
+                          <label for="name" class="cols-sm-2 control-label" style="font-weight: 900; font-size: medium; font: 1rem sans-serif; float: left;" >Branch Name</label>
+                               <div class="cols-sm-10">
+                                  <div class="input-group">
+                                   <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                             <input type="text" class="form-control" name="sbr" id="name" placeholder="Enter branch Name" />
+                                       </div>
+                                 </div>
+                                 </div>
+                         <div class="mb-3">
+                          <label for="name" class="cols-sm-2 control-label" style="font-weight: 900; font-size: medium; font: 1rem sans-serif; float: left;" >stubject Name</label>
+                               <div class="cols-sm-10">
+                                  <div class="input-group">
+                                   <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                             <input type="text" class="form-control" name="ssub" id="name" placeholder="Enter stubject Name" />
+                                       </div>
+                                 </div>
+                                 </div>
+                                 
+                              
+                <div class="mb-3">
+ <label for="name" class="cols-sm-2 control-label" style="font-weight: 900; font-size: medium; font: 1rem sans-serif; float: left;" >student Name</label>
+      <div class="cols-sm-10">
+         <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+    <input type="text" class="form-control" name="snm" id="name" placeholder="Enter student Name" />
+              </div>
+        </div>
+                 </div>
+
+    <div class="mb-3">
+               <label for="email" class="cols-sm-2 control-label" style="font-weight: 900; font-size: medium; font: 1rem sans-serif; float: left;"> Email</label>
+                <div class="cols-sm-10">
+             <div class="input-group">
+           <span class="input-group-addon"></span>
+    <input type="text" class="form-control" name="seid" id="email" placeholder="Enter your Email" />
+       </div>
+           </div>
+      </div>
+       <div class="mb-3">
+            <label  class="cols-sm-2 control-label" style="font-weight: 900; font-size: medium; font: 1rem sans-serif; float: left;">Mobile</label>
+             <div class="cols-sm-10">
+          <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+  <input type="number" class="form-control" name="smno"  placeholder="Enter your Mobile" />
+    </div>
+     </div>
+ </div>
+
+
+ <div class="mb-3">
+   <label  class="cols-sm-2 control-label" style="font-weight: 900; font-size: medium; font: 1rem sans-serif; float: left;">Address</label>
+ <div class="cols-sm-10">
+ <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+     <input type="text" class="form-control" name="sadd"  placeholder="Enter your Address" />
+ </div>
+</div>
+</div>
+<div class="mb-3">
+<label  class="cols-sm-2 control-label" style="font-weight: 900; font-size: medium; font: 1rem sans-serif; float: left;">City</label>
+<div class="cols-sm-10">
+<div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+  <input type="text" class="form-control" name="scity"  placeholder="Enter your City" />
+</div>
+  </div>
+    </div>
+
+    <div class="mb-3">
+     <label  class="cols-sm-2 control-label" style="font-weight: 900; font-size: medium; font: 1rem sans-serif; float: left;">Description</label>
+       <div class="cols-sm-10">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+ <input type="text" class="form-control" name="sdesc"  placeholder="Enter Description" />
+ </div>
+ </div>
+</div>
+
+<div class="mb-3">
+  <label  class="cols-sm-2 control-label" style="font-weight: 900; font-size: medium; font: 1rem sans-serif; float: left;">IMAGE UPLOAD</label>
+    <div class="cols-sm-10">
+ <div class="input-group">
+<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+<input type="file" class="form-control" name="simg" value="upload"/>
+</div>
+</div>
+</div>
+<br><br>
+ {% csrf_token %}
+   <div class="form-group ">
+<button type="submit" class="btn btn-primary ">Register</button>
+</div>
+
+
+</form>
+ 
+    </div>
+   </div>
+    </div>
+ 
+   
+   </body>
+   </center>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register your self</title>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+            <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <!------ Include the above in your HEAD tag ---------->
+    </head>
+    <style>
+        body {
+          background-color: black;
+        }
+
+    </style>
+        <body>
+            <h1>{{data}}</h1>
+
+            <div class="container">
+            <div class="row justify-content-center">
+                                <div class="col-md-8">
+                                    <div class="card">
+        <div class="card-header " style="color: cadetblue;">College Registration form</div>
+              <div class="card-body">
+
+    <form class="form-horizontal" method="post" action="../collegereg/" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>University Name:</p>
+        <select name="unm">
+            <option value="select university"> select university</option>
+            {% for task in university %}
+            <option value="{{task.pk}}">{{task.uname}}</option>
+            {% endfor %}
+        </select>     <div class="form-group">
+ <label for="name" class="cols-sm-2 control-label">College Name</label>
+      <div class="cols-sm-10">
+         <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+    <input type="text" class="form-control" name="cnm" id="name" placeholder="Enter college Name" />
+              </div>
+        </div>
+                 </div>
+
+    <div class="form-group">
+               <label for="email" class="cols-sm-2 control-label"> Email</label>
+                <div class="cols-sm-10">
+             <div class="input-group">
+           <span class="input-group-addon"></span>
+    <input type="text" class="form-control" name="ceid" id="email" placeholder="Enter your Email" />
+       </div>
+           </div>
+      </div>
+       <div class="form-group">
+            <label  class="cols-sm-2 control-label">Mobile</label>
+             <div class="cols-sm-10">
+          <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+  <input type="number" class="form-control" name="cmno"  placeholder="Enter your Mobile" />
+    </div>
+     </div>
+ </div>
+
+
+ <div class="form-group">
+   <label  class="cols-sm-2 control-label">Address</label>
+ <div class="cols-sm-10">
+ <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+     <input type="text" class="form-control" name="cadd"  placeholder="Enter your Address" />
+ </div>
+</div>
+</div>
+<div class="form-group">
+<label  class="cols-sm-2 control-label">City</label>
+<div class="cols-sm-10">
+<div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+  <input type="text" class="form-control" name="ccity"  placeholder="Enter your City" />
+</div>
+  </div>
+    </div>
+   <div class="form-group">
+  <label class="cols-sm-2 control-label">College website</label>
+   <div class="cols-sm-10">
+       <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+  <input type="text" class="form-control" name="cweb"  placeholder="Enter College website" />
+   </div>
+  </div>
+  </div>
+    <div class="form-group">
+     <label  class="cols-sm-2 control-label">Description</label>
+       <div class="cols-sm-10">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+ <input type="text" class="form-control" name="cdesc"  placeholder="Enter Description" />
+ </div>
+ </div>
+</div>
+
+ {% csrf_token %}
+   <div class="form-group ">
+<button type="submit" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+</div>
+
+<div class="login-register">
+   <a href="#">Login</a>
+   </div>
+
+</form>
+  </div>
+    </div>
+   </div>
+    </div>
+   </div>
+   </body>
+</html>
