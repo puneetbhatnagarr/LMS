@@ -58,7 +58,8 @@ MIDDLEWARE_CLASSES = (
     'whitenoise.middleware.WhiteNoiseMiddleware',
     ...)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage',
-heroku config:set DISABLE_COLLECTSTATIC=1
+heroku config:set DEBUG_COLLECTSTATIC=1,
+heroku config:set DISABLE_COLLECTSTATIC=1,
 
    
 
