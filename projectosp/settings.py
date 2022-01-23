@@ -57,7 +57,7 @@ MIDDLEWARE_CLASSES = (
     # https://warehouse.python.org/project/whitenoise/
     'whitenoise.middleware.WhiteNoiseMiddleware',
     ...)
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage',
 heroku config:set DISABLE_COLLECTSTATIC=1
 
    
