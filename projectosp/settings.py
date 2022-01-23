@@ -55,7 +55,7 @@ MIDDLEWARE = [
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage',
-heroku config:set DISABLE_COLLECTSTATIC=1,
+heroku config:unset DISABLE_COLLECTSTATIC=1,
 
    
 
