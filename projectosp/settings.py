@@ -57,8 +57,8 @@ MIDDLEWARE_CLASSES = (
     # https://warehouse.python.org/project/whitenoise/
     'whitenoise.middleware.WhiteNoiseMiddleware',
     ...
-   STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-   heroku config:set DEBUG_COLLECTSTATIC=1
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
    
 
 ROOT_URLCONF = 'projectosp.urls'
